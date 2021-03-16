@@ -11,7 +11,8 @@ import javafx.scene.layout.GridPane;
 
 public class FXMLController {
 
-	AlienDictionary dizionario=new AlienDictionary();
+	//AlienDictionary dizionario=new AlienDictionary();
+	AlienDictionaryEnhanced dizionario=new AlienDictionaryEnhanced();
 	
     @FXML
     private ResourceBundle resources;
@@ -47,8 +48,9 @@ public class FXMLController {
         	return ;	
     	}
     	if(dizionario.translation(traduzione[0].toLowerCase())!=null && dizionario.translation(traduzione[0].toLowerCase()).length()!=0) {
-    	txtResult.setText("La traduzione di "+traduzione[0].toLowerCase()+" è "+dizionario.translation(traduzione[0].toLowerCase()));
-        return ;
+    	//txtResult.setText("La traduzione di "+traduzione[0].toLowerCase()+" è "+dizionario.translation(traduzione[0].toLowerCase()));
+    		txtResult.setText("La traduzione di "+traduzione[0].toLowerCase()+" sono: "+dizionario.translation(traduzione[0].toLowerCase()));
+    		return ;
     	}else {
     		txtResult.setText("Parola non presente nel dizionario");
     		return;
